@@ -5,8 +5,8 @@ export default function Main(props) {
 
  
     return (
-      <main className="mx-auto my-4 h-96">
-        <div className="mx-auto h-88">
+      <main className="mx-auto">
+        <div className="mx-auto">
           <Form onStandCreate={props.onStandCreate}/>
         </div>
       </main>

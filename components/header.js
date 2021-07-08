@@ -6,7 +6,7 @@ export default function Header() {
       <h1 className="text-4xl">Cookie Stand Admin</h1>
       <nav className="flex ml-96">
         <Link href="/overview">
-          <a className="px-3 py-3 bg-gray-300 rounded-lg">Overview</a>
+          <a className="px-3 py-3 bg-gray-400 rounded-lg">Overview</a>
         </Link>
       </nav>
     </header>

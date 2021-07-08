@@ -1,5 +1,3 @@
-
-
 export default function Form(props) {
 
     function submitHandler(event) {
@@ -13,36 +11,31 @@ export default function Form(props) {
         props.onStandCreate(standInfo)
     }
 
-        return (
-            <>
-                <form className="justify-center p-2 mx-10 my-5 bg-green-300 rounded h-168" onSubmit={submitHandler}>
-                    <div>
-                        <h2 className="min-w-full p-2 mx-auto my-2 text-2xl text-center fonr-semibold">
-                            Create Cookie Stand
-              </h2>
-                        <div className="flex mx-20">
-                            <label className="mx-2">Location</label>
-                            <input id="location" name="location" type="text" className="flex w-3/4" />
-                        </div>
-                        <div className="flex items-center w-3/4 py-10 mx-20">
-
-                            <div className="justify-items-start">
-                                <label className="py-10">Minimum Customers Per Hour</label>
-                                <input id="min-customers" name="minCustomers" type="number" className="mx-1" />
-                            </div>
-                            <div className="justify-items-start">
-                                <label className="py-10">Maximum Customers Per Hour</label>
-                                <input id="max-customers" name="maxCustomers" type="number" className="mx-1" />
-                            </div>
-                            <div className="justify-items-start">
-                                <label className="py-10">Average Cookies Per Sale</label>
-                                <input id="avg-cookies" name="avgCookies" type="number" step=".1" className="mx-1" />
-                            </div>
-                            <button type="submit" className="h-20 bg-green-500 w-60">Create</button>
-                        </div>
+    return (
+        <div className="px-3 py-3 mx-auto my-8 bg-green-300 rounded-lg w-max">
+            <legend className="p-2 text-2xl text-center">Create Cookie Stand</legend>
+            <form className="p-2 mx-auto border-gray-200" onSubmit={submitHandler}>
+                <div className="flex items-center">
+                    <p className="pr-2">Location</p>
+                    <input name="location" id="location" type="text" className="w-full h-4 pl-2 placeholder-black bg-blue-50" />
+                </div>
+                <div className="flex justify-center p-3 my-5">
+                    <div className="mx-2 bg-green-50">
+                        <p className="text-xs text-center">Minimum Customers per Hour</p>
+                        <input id="min-customers" name="minCustomers" type="number" className="h-5 mx-3 placeholder-black w-95"></input>
                     </div>
-                </form>
-            </>
-        )
+                    <div className="mx-2 bg-green-50">
+                        <p className="text-xs text-center">Maximum Customers per Hour</p>
+                        <input id="max-customers" name="maxCustomers" type="number" className="h-5 mx-3 placeholder-black"></input>
+                    </div>
+                    <div className="mx-2 bg-green-50">
+                        <p className="text-xs text-center">Average Cookies Per Sale</p>
+                        <input id="avg-cookies" type="number" step=".1" name="avgCookies" className="h-5 mx-3 placeholder-black"></input>
+                    </div>
+                    <button className="px-20 py-3 bg-green-500 rounded w-max">Create</button>
+                </div>
+            </form>
+        </div>
+    )
 
-    }
+}
