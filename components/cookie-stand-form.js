@@ -4,10 +4,9 @@ export default function CookieStand(props) {
         event.preventDefault();
         const standInfo = {};
         standInfo.location = event.target.location.value;
-        standInfo.minCustomers = parseInt(event.target.minCustomers.value);
-        standInfo.maxCustomers = parseInt(event.target.maxCustomers.value);
-        standInfo.avgCookies = parseFloat(event.target.avgCookies.value);
-        standInfo.hourlySales = [48, 42, 30, 24, 42, 24, 36, 42, 42, 48, 36, 42, 24, 36]
+        standInfo.minCustomers = parseInt(event.target.min.value);
+        standInfo.maxCustomers = parseInt(event.target.max.value);
+        standInfo.avgCookies = parseFloat(event.target.avg.value);
         props.onStandCreate(standInfo)
     }
 
@@ -22,15 +21,15 @@ export default function CookieStand(props) {
                 <div className="flex justify-center p-3 my-5">
                     <div className="mx-2 bg-green-50">
                         <p className="text-xs text-center">Minimum Customers per Hour</p>
-                        <input id="min-customers" name="minCustomers" type="number" className="h-5 mx-3 placeholder-black w-95"></input>
+                        <input id="min" name="min" type="number" className="h-5 mx-3 placeholder-black w-95"></input>
                     </div>
                     <div className="mx-2 bg-green-50">
                         <p className="text-xs text-center">Maximum Customers per Hour</p>
-                        <input id="max-customers" name="maxCustomers" type="number" className="h-5 mx-3 placeholder-black"></input>
+                        <input id="max" name="max" type="number" className="h-5 mx-3 placeholder-black"></input>
                     </div>
                     <div className="mx-2 bg-green-50">
                         <p className="text-xs text-center">Average Cookies Per Sale</p>
-                        <input id="avg-cookies" type="number" step=".1" name="avgCookies" className="h-5 mx-3 placeholder-black"></input>
+                        <input id="avg" type="number" step=".1" name="avg" className="h-5 mx-3 placeholder-black"></input>
                     </div>
                     <button className="px-20 py-3 bg-green-500 rounded w-max">Create</button>
                 </div>
