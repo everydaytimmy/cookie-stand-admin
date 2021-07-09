@@ -1,4 +1,4 @@
-export default function Form(props) {
+export default function CookieStand(props) {
 
     function submitHandler(event) {
         event.preventDefault();
